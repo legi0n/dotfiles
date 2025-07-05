@@ -46,9 +46,7 @@ REQUIRED_PACKAGES=(
   nodejs
   npm
   python3
-  python3-pip
   python3-venv
-  ripgrep
   unzip
 )
 

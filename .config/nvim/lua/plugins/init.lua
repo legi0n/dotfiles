@@ -30,7 +30,7 @@ return {
             { "j-hui/fidget.nvim", opts = {} },
         },
         config = function()
-            require "plugins.config.lspconfig"
+            require "plugins.config.lsp"
         end,
     },
     {
@@ -88,21 +88,6 @@ return {
             return require "plugins.config.treesitter"
         end,
     },
-    { -- Automatically add closing tags for HTML and JSX
-        "windwp/nvim-ts-autotag",
-        opts = {},
-    },
-    {
-        "echasnovski/mini.nvim",
-        config = function()
-            require("mini.move").setup() -- Move any selection in any direction
-            local statusline = require "mini.statusline"
-            statusline.setup { use_icons = vim.g.have_nerd_font }
-            statusline.section_location = function()
-                return "%2l:%-2v"
-            end
-        end,
-    },
     {
         "nvim-telescope/telescope.nvim",
         event = "VimEnter",
@@ -132,19 +117,10 @@ return {
         end,
     },
     {
-        "nvim-neo-tree/neo-tree.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "MunifTanjim/nui.nvim",
-            { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
-        },
-        cmd = "Neotree",
-        keys = {
-            { "<leader>tt", ":Neotree toggle<CR>", desc = "[T]oggle Neo[T]ree", silent = true },
-        },
-        opts = {
-            close_if_last_window = true,
-        },
+        "lewis6991/gitsigns.nvim",
+        opts = function()
+            return require "plugins.config.gitsigns"
+        end,
     },
     {
         "mbbill/undotree",
@@ -155,16 +131,20 @@ return {
             vim.g.undotree_SetFocusWhenToggle = 1 -- Auto-focus undotree window
         end,
     },
-    "tpope/vim-fugitive", -- A Git wrapper so awesome, it should be illegall
     {
-        "lewis6991/gitsigns.nvim",
-        opts = function()
-            return require "plugins.config.gitsigns"
+        "echasnovski/mini.nvim",
+        config = function()
+            require("mini.move").setup() -- Move any selection in any direction
+            local statusline = require "mini.statusline"
+            statusline.setup { use_icons = vim.g.have_nerd_font }
+            statusline.section_location = function()
+                return "%2l:%-2v"
+            end
         end,
     },
+    { "numToStr/Comment.nvim", opts = {} }, -- Better comments
     "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
     "mg979/vim-visual-multi", -- Multi-cursor support
-    { "numToStr/Comment.nvim", opts = {} }, -- Better comments
     {
         "folke/which-key.nvim",
         event = "VimEnter",

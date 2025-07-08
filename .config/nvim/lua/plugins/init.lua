@@ -35,7 +35,7 @@ return {
     },
     {
         "hrsh7th/nvim-cmp",
-        event = "InsertEnter", -- Load when entering Insert mode
+        event = "InsertEnter",
         dependencies = {
             {
                 "L3MON4D3/LuaSnip",
@@ -91,7 +91,7 @@ return {
     {
         "nvim-telescope/telescope.nvim",
         event = "VimEnter",
-        branch = "0.1.x", -- Use a specific branch for stability
+        branch = "0.1.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
             {
@@ -110,7 +110,7 @@ return {
     },
     {
         "ThePrimeagen/harpoon",
-        branch = "harpoon2", -- Use the latest v2 branch
+        branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
             require "plugins.config.harpoon"
@@ -128,7 +128,7 @@ return {
             { "<leader>tu", vim.cmd.UndotreeToggle, desc = "[T]oggle [U]ndotree", silent = true },
         },
         config = function()
-            vim.g.undotree_SetFocusWhenToggle = 1 -- Auto-focus undotree window
+            vim.g.undotree_SetFocusWhenToggle = 1
         end,
     },
     {

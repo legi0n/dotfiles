@@ -47,6 +47,7 @@ REQUIRED_PACKAGES=(
   npm
   python3
   python3-venv
+  openjdk-21-jdk
   unzip
 )
 

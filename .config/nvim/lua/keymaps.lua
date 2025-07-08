@@ -1,16 +1,22 @@
 -- [[ Global Keymaps ]]
 -- See `:help vim.keymap.set()` for more details.
 
+local function create_cmd(cmd)
+    return function()
+        vim.cmd(cmd)
+    end
+end
+
 -- Plugin Management (Lazy.nvim)
 vim.keymap.set("n", "<leader>ph", vim.cmd.Lazy, { desc = "[P]lugins [H]ome" })
-vim.keymap.set("n", "<leader>pi", function() vim.cmd("Lazy install") end, { desc = "[P]lugins [I]nstall" })
-vim.keymap.set("n", "<leader>pu", function() vim.cmd("Lazy update") end, { desc = "[P]lugins [U]pdate" })
-vim.keymap.set("n", "<leader>ps", function() vim.cmd("Lazy sync") end, { desc = "[P]lugins [S]ync" })
-vim.keymap.set("n", "<leader>pc", function() vim.cmd("Lazy clean") end, { desc = "[P]lugins [C]lean" })
+vim.keymap.set("n", "<leader>pi", create_cmd "Lazy install", { desc = "[P]lugins [I]nstall" })
+vim.keymap.set("n", "<leader>pu", create_cmd "Lazy update", { desc = "[P]lugins [U]pdate" })
+vim.keymap.set("n", "<leader>ps", create_cmd "Lazy sync", { desc = "[P]lugins [S]ync" })
+vim.keymap.set("n", "<leader>pc", create_cmd "Lazy clean", { desc = "[P]lugins [C]lean" })
 
 -- Mason Management
 vim.keymap.set("n", "<leader>pmh", vim.cmd.Mason, { desc = "[P]lugins [M]ason [H]ome" })
-vim.keymap.set("n", "<leader>pmu", function() vim.cmd("MasonUpdate") end, { desc = "[P]lugins [M]ason [U]pdate" })
+vim.keymap.set("n", "<leader>pmu", create_cmd "MasonUpdate", { desc = "[P]lugins [M]ason [U]pdate" })
 
 -- Buffer Navigation
 vim.keymap.set("n", "<leader>be", vim.cmd.Ex, { desc = "[B]uffer [E]xplorer (Netrw)" })
@@ -32,7 +38,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- Search and Highlighting
-vim.keymap.set("n", "<Esc>", function() vim.cmd("set nohlsearch") end, { desc = "Clear search highlights" })
+vim.keymap.set("n", "<Esc>", create_cmd "set nohlsearch", { desc = "Clear search highlights" })
 
 -- Disable Arrow Keys
 -- Discourage arrow key movement in normal mode

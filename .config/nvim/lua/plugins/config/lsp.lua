@@ -47,23 +47,66 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 -- LSP Servers configuration
-local servers = {
-    clangd = {},
-    pyright = {},
-    ts_ls = {},
-    jdtls = {},
-    lua_ls = {
+local language_configs = {
+    lua = {
+        detect = {},
+        lsp = "lua_ls",
         settings = {
             Lua = {
                 completion = { callSnippet = "Replace" },
             },
         },
+        tools = { "stylua" },
+    },
+    python = {
+        detect = { "python3", "python" },
+        lsp = "pyright",
+        tools = { "isort", "black", "flake8" },
+    },
+    c = {
+        detect = { "clang", "gcc" },
+        lsp = "clangd",
+        tools = { "clang-format" },
+    },
+    java = {
+        detect = { "javac" },
+        lsp = "jdtls",
+        tools = { "google-java-format" },
+    },
+    typescript = {
+        detect = { "node", "npm" },
+        lsp = "ts_ls",
+        tools = { "prettier" },
     },
 }
 
+local function has_any_cmd(cmds)
+    for _, cmd in ipairs(cmds) do
+        if vim.fn.executable(cmd) == 1 then
+            return true
+        end
+    end
+    return false
+end
+
+local servers = {}
+local tools = {}
+
+for _, lang in pairs(language_configs) do
+    if #lang.detect == 0 or has_any_cmd(lang.detect) then
+        if lang.lsp then
+            servers[lang.lsp] = {}
+            if lang.settings then
+                servers[lang.lsp].settings = lang.settings
+            end
+        end
+        vim.list_extend(tools, lang.tools or {})
+    end
+end
+
 -- Install required LSP servers and tools via Mason
 local ensure_installed = vim.tbl_keys(servers)
-vim.list_extend(ensure_installed, { "stylua", "clang-format", "isort", "black", "flake8", "prettier", "google-java-format", "latexindent" })
+vim.list_extend(ensure_installed, tools)
 
 -- Setup Mason Tool Installer for additional tools required for Conform
 require("mason-tool-installer").setup {

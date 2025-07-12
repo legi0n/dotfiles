@@ -1,3 +1,4 @@
+local cmp = require "cmp"
 local luasnip = require "luasnip"
 
 -- Set up LuaSnip (snippets)

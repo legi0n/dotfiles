@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/Recordings"
+mkdir -p $DIR
+
+FLAGS=""
+
+if [[ "$1" == "audio" ]]; then
+    FLAGS="--audio" # Enable audio
+fi
+
+if pgrep -x wf-recorder >/dev/null; then
+    pkill -INT wf-recorder
+else
+    wf-recorder -g "$(slurp -o)" -f "$DIR/$(date +%Y-%m-%d_%H-%M-%S).mp4" $FLAGS
+fi

@@ -1,16 +1,25 @@
 #!/usr/bin/env bash
 
 DIR="$HOME/Recordings"
-mkdir -p $DIR
+mkdir -p "$DIR"
 
-FLAGS=""
+FLAGS=()
 
-if [[ "$1" == "audio" ]]; then
-    FLAGS="--audio" # Enable audio
-fi
+for arg in "$@"; do
+    case "$arg" in
+        audio)
+            FLAGS+=(--audio) # Enable audio
+            ;;
+    esac
+done
 
 if pgrep -x wf-recorder >/dev/null; then
     pkill -INT wf-recorder
+    notify-send -i media-playback-stop -t 2500 "Screen Recorder" "Recording saved to $DIR!"
 else
-    wf-recorder -g "$(slurp -o)" -f "$DIR/$(date +%Y-%m-%d_%H-%M-%S).mp4" $FLAGS
+    GEOM="$(slurp -o)"
+    
+    [[ -z "$GEOM" ]] && exit 0 # If selection was cancelled
+    
+    wf-recorder -g "$GEOM" -f "$DIR/$(date +%Y-%m-%d_%H-%M-%S).mp4" "${FLAGS[@]}"
 fi

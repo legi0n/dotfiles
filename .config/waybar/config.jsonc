@@ -1,0 +1,42 @@
+// [[ Waybar Configuration ]]
+{
+    // Basic styling
+    "margin": "10 10 -10 10",
+    "spacing": 5,
+
+    // Modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock#time"],
+    "modules-right": ["network", "pulseaudio", "clock#date"],
+
+    // Module configuration
+    "clock#time": {
+        "format": "{:%H:%M}",
+        "tooltip": false
+    },
+
+    "clock#date": {
+        "format": "<span font='16px'>󰸗 </span>{:%a, %d %b}",
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi": "<span font='16px'>{icon} </span>{essid}",
+        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        "tooltip-format-wifi": "<b>Interface</b>: {ifname}\n<b>IP Addr</b>: {ipaddr}\n<b>Strength</b>: {signalStrength}%\n<b>Frequency</b>: {frequency} GHz"
+    },
+
+    "pulseaudio": {
+        "format": "<span font='16px'>{icon} </span>{volume}%",
+		"format-icons": {
+			"default": ["󰕿", "󰖀", "󰕾"],
+			"default-muted": "󰝟",
+			"headphone": "󰋋",
+			"headphone-muted": "󰟎",
+			"headset": "󰋎",
+			"headset-muted": "󰋐"
+		},
+        "tooltip-format": "<b>Output Device</b>: {desc}",
+        "scroll-step": 5
+    }
+}

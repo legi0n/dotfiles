@@ -23,7 +23,7 @@
     "network": {
         "format-wifi": "<span font='16px'>{icon} </span>{essid}",
         "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
-        "tooltip-format-wifi": "<b>Interface</b>: {ifname}\n<b>IP Addr</b>: {ipaddr}\n<b>Strength</b>: {signalStrength}%\n<b>Frequency</b>: {frequency} GHz"
+        "tooltip-format-wifi": "Interface     {ifname}\nIP Addr        {ipaddr}\nStrength      {signalStrength}%\nFrequency   {frequency} GHz"
     },
 
     "pulseaudio": {
@@ -36,7 +36,8 @@
 			"headset": "󰋎",
 			"headset-muted": "󰋐"
 		},
-        "tooltip-format": "<b>Output Device</b>: {desc}",
-        "scroll-step": 5
+        "tooltip-format": "{desc}",
+        "scroll-step": 5,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     }
 }

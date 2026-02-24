@@ -1,0 +1,75 @@
+/* Theme */
+@define-color surface-bg #1e1e1e;
+@define-color surface-hover #808080;
+@define-color surface-active #b6b8bb;
+
+@define-color text-primary #f2f4f8;
+@define-color text-dark #161616;
+@define-color text-muted #a0a4aa;
+
+@define-color error #ff5f5f;
+
+
+/* Global Styles */
+* {
+    border: none;
+    font-family: "JetBrains Mono Nerd Font";
+    font-weight: 600;
+    font-size: 15px;
+    min-height: 15px;
+}
+
+
+/* Waybar Container */
+window#waybar {
+    background: transparent;
+}
+
+
+/* Tooltip */
+tooltip {
+    background: @surface-bg;
+    color: @main-color;
+    border-radius: 7px;
+    border-width: 0px;
+}
+
+
+/* Modules */
+#workspaces,
+#clock,
+#network,
+#pulseaudio {
+    background: @surface-bg;
+    color: @text-primary;
+    border-radius: 12px;
+    padding: 4px 12px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#workspaces {
+    padding: 0px;
+}
+
+#workspaces button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 4px 14px;
+    color: @text-muted;
+    border-radius: 12px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: @surface-hover;
+    color: @text-primary;
+}
+
+#workspaces button.active {
+    background: @surface-active;
+    color: @text-dark;
+}
+
+#pulseaudio.muted {
+    color: @error;
+}

@@ -1,0 +1,9 @@
+[user]
+    name = "legi0n"
+    email = "76619180+legi0n@users.noreply.github.com"
+
+[core]
+    editor = nvim
+
+[init]
+    defaultBranch = main

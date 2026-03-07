@@ -4,6 +4,7 @@ set -e
 
 dotfiles=(
     ".bashrc"
+    ".gitconfig"
     ".tmux.conf"
     ".config/hypr"
     ".config/nvim"

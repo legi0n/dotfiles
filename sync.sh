@@ -12,7 +12,7 @@ dotfiles=(
 )
 
 link() {
-    src="$PWD$1"
+    src="$PWD/$1"
     dest="$HOME/$1"
 
     mkdir -p "$(dirname "$dest")"

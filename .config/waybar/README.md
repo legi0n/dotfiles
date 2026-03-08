@@ -1,6 +1,7 @@
 # Waybar Configuration
 
-> Maintained for my Arch Linux machine - may require adjustments on other systems.
+>[!NOTE]
+> This configuration is maintained for my Arch Linux machine, and it may require adjustments on other systems.
 
 ## Standalone Installation
 

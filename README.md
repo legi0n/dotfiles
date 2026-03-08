@@ -1,8 +1,9 @@
 # Dotfiles
 
-My personal configuration files for my development environment.
+These are my personal configuration files for my development environment.
 
-> Maintained for my Arch Linux machine - may require adjustments on other systems.
+>[!NOTE]
+> This configuration is maintained for my Arch Linux machine, and it may require adjustments on other systems.
 
 ## Installation
 

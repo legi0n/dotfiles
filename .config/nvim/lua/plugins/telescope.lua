@@ -10,5 +10,5 @@ return {
         { "<leader>fg", "<cmd>Telescope git_files<cr>", desc = "Find Git Files" },
         { "<leader>fl", "<cmd>Telescope live_grep<cr>", desc = "Find with Grep" },
         { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find Buffers" },
-    }
+    },
 }

@@ -50,6 +50,11 @@ return {
         dependencies = {
             { "j-hui/fidget.nvim", opts = {} },
         },
+        keys = {
+            { "<leader>ca", vim.lsp.buf.code_action, mode = { "n", "x" }, desc = "LSP: Code Action" },
+            { "<leader>cd", vim.lsp.buf.declaration, desc = "LSP: Declaration" },
+            { "<leader>cr", vim.lsp.buf.rename, desc = "LSP: Rename" },
+        },
         config = function()
             local lsp_attach_group = vim.api.nvim_create_augroup("lsp-attach", { clear = true })
             vim.api.nvim_create_autocmd("LspAttach", {

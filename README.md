@@ -2,7 +2,7 @@
 
 These are my personal configuration files for my development environment.
 
->[!NOTE]
+> [!NOTE]
 > This configuration is maintained for my Arch Linux machine, and it may require adjustments on other systems.
 
 ## Installation

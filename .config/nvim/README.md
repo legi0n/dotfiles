@@ -1,6 +1,6 @@
 # Neovim Configuration
 
->[!NOTE]
+> [!NOTE]
 > This configuration is maintained for my Arch Linux machine, and it may require adjustments on other systems.
 
 ## Standalone Installation

@@ -17,6 +17,20 @@ local config = {
         server = "pyright",
         tools = { "isort", "black" },
     },
+    c = {
+        detect = { "clang", "gcc" },
+        server = "clangd",
+        tools = { "clang-format" },
+    },
+    java = {
+        detect = { "javac" },
+        server = "jdtls",
+        tools = { "google-java-format" },
+    },
+    typescript = {
+        detect = { "tsc", "bun", "node" },
+        server = "ts_ls",
+    },
 }
 
 local function has_any_cmd(cmds)
@@ -29,7 +43,7 @@ local function has_any_cmd(cmds)
 end
 
 local servers = {}
-local tools = {}
+local tools = { "prettier" }
 
 for _, lang in pairs(config) do
     if #lang.detect == 0 or has_any_cmd(lang.detect) then

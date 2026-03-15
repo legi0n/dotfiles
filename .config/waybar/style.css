@@ -9,7 +9,6 @@
 
 @define-color error #ff5f5f;
 
-
 /* Global Styles */
 * {
     border: none;
@@ -19,12 +18,10 @@
     min-height: 15px;
 }
 
-
 /* Waybar Container */
 window#waybar {
     background: transparent;
 }
-
 
 /* Tooltip */
 tooltip {
@@ -33,7 +30,6 @@ tooltip {
     border-radius: 7px;
     border-width: 0px;
 }
-
 
 /* Modules */
 #workspaces,
@@ -44,7 +40,9 @@ tooltip {
     color: @text-primary;
     border-radius: 12px;
     padding: 4px 12px;
-    transition: background 0.2s ease, color 0.2s ease;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
 #workspaces {
@@ -57,7 +55,9 @@ tooltip {
     padding: 4px 14px;
     color: @text-muted;
     border-radius: 12px;
-    transition: background 0.2s ease, color 0.2s ease;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
 #workspaces button:hover {

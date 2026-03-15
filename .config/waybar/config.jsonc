@@ -21,21 +21,23 @@
     },
 
     "network": {
+        "format-ethernet": "<span font='16px'>󰈀</span>",
         "format-wifi": "<span font='16px'>{icon} </span>{essid}",
         "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        "tooltip-format-ethernet": "Interface     {ifname}\nIP Addr        {ipaddr}",
         "tooltip-format-wifi": "Interface     {ifname}\nIP Addr        {ipaddr}\nStrength      {signalStrength}%\nFrequency   {frequency} GHz"
     },
 
     "pulseaudio": {
         "format": "<span font='16px'>{icon} </span>{volume}%",
-		"format-icons": {
-			"default": ["󰕿", "󰖀", "󰕾"],
-			"default-muted": "󰝟",
-			"headphone": "󰋋",
-			"headphone-muted": "󰟎",
-			"headset": "󰋎",
-			"headset-muted": "󰋐"
-		},
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"],
+            "default-muted": "󰝟",
+            "headphone": "󰋋",
+            "headphone-muted": "󰟎",
+            "headset": "󰋎",
+            "headset-muted": "󰋐"
+        },
         "tooltip-format": "{desc}",
         "scroll-step": 5,
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"

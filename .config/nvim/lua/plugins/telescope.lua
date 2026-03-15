@@ -20,5 +20,6 @@ return {
         },
         { "<leader>fl", "<cmd>Telescope live_grep<cr>", desc = "Find with Grep" },
         { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find Buffers" },
+        { "<leader>fr", "<cmd>Telescope resume<cr>", desc = "Resume Last Search" },
     },
 }

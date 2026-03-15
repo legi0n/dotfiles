@@ -9,7 +9,7 @@ Ensure the packages below are installed for the setup to work properly.
 
 ```sh
 # Packages
-pacman -S --needed kitty, nautilus, waybar, wl-clip-persist, wf-recorder, hyprshot, hyprlock, hypridle
+pacman -S --needed kitty nautilus waybar wl-clip-persist wf-recorder hyprshot hyprlock hypridle
 
 # AUR packages (yay, paru, etc.)
 paru -S --needed zen-browser-bin

@@ -9,6 +9,7 @@ dotfiles=(
     ".config/hypr"
     ".config/nvim"
     ".config/waybar"
+    ".config/wofi"
     ".local/bin/toggle-screen-recorder"
 )
 

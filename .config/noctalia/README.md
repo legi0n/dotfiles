@@ -1,4 +1,4 @@
-# Hyprland Configuration
+# Noctalia Configuration
 
 > [!NOTE]
 > This configuration is maintained for my Arch Linux machine, and it may require adjustments on other systems.
@@ -9,10 +9,10 @@ Ensure the packages below are installed for the setup to work properly.
 
 ```sh
 # Packages
-pacman -S --needed hyprland kitty nautilus
+pacman -S --needed noctalia gpu-screen-recorder
 
 # AUR packages (yay, paru, etc.)
-paru -S --needed zen-browser-bin
+paru -S --needed wl-screenrec
 ```
 
 ## Standalone Installation
@@ -25,8 +25,8 @@ git clone https://github.com/legi0n/dotfiles.git
 
 ### Copy the configuration
 
-Copy the configuration from the repository to your `~/.config/hypr` directory:
+Copy the configuration from the repository to your `~/.config/noctalia` directory:
 
 ```sh
-mkdir -p ~/.config && cp -r dotfiles/.config/hypr ~/.config/
+mkdir -p ~/.config && cp -r dotfiles/.config/noctalia ~/.config/
 ```

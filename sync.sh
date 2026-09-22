@@ -7,10 +7,8 @@ dotfiles=(
     ".gitconfig"
     ".tmux.conf"
     ".config/hypr"
+    ".config/noctalia"
     ".config/nvim"
-    ".config/waybar"
-    ".config/wofi"
-    ".local/bin/toggle-screen-recorder"
 )
 
 link() {

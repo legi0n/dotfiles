@@ -8,12 +8,12 @@
 Ensure the packages below are installed for the setup to work properly.
 
 ```sh
-pacman -S --needed neovim unzip npm
+pacman -S --needed neovim git unzip npm ripgrep
 ```
 
 ## Standalone Installation
 
-### Clone the Repository
+### Clone the repository
 
 ```sh
 git clone https://github.com/legi0n/dotfiles.git

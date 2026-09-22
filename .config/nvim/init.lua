@@ -1,7 +1,5 @@
--- [[ Neovim Configuration ]]
-
-require("options")
-require("keymaps")
+require("config.options")
+require("config.keymaps")
 
 -- Plugin Manager
 -- See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim

@@ -1,0 +1,300 @@
+[bar.default]
+end = [ "network", "volume", "date", "notifications", "recorder" ]
+start = [ "workspaces" ]
+widget_spacing = 12
+
+[control_center]
+hidden_tabs = [ "power" ]
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+[desktop_widgets]
+enabled = false
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 1320.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 1200.0
+
+[location]
+auto_locate = true
+
+[lockscreen]
+fingerprint = false
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@DP-1",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000004",
+    "lockscreen-widget-0000000000000005",
+    "lockscreen-widget-0000000000000006",
+    "lockscreen-widget-0000000000000007",
+    "lockscreen-widget-0000000000000008"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 128.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 652.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = false
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = false
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 128.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 652.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = false
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 96.0
+    box_width = 176.0
+    cx = 960.0
+    cy = 444.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 32.0
+    box_width = 256.0
+    cx = 960.0
+    cy = 492.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
+        format = "{:%A, %d %B}"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 170.0
+    cy = 113.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = false
+        show_forecast = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1687.0
+    cy = 104.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+        background = false
+        hide_when_no_media = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
+    box_height = 96.0
+    box_width = 176.0
+    cx = 960.0
+    cy = 444.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000005.settings]
+        background = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
+    box_height = 32.0
+    box_width = 256.0
+    cx = 960.0
+    cy = 492.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
+        background = false
+        format = "{:%A, %d %B}"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000007]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 170.0
+    cy = 113.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000007.settings]
+        background = false
+        show_forecast = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1687.0
+    cy = 104.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
+        background = false
+        hide_when_no_media = true
+
+[nightlight]
+enabled = true
+
+[plugin_settings."noctalia/screen_recorder"]
+audio_source = "both"
+copy_to_clipboard = true
+hide_inactive = true
+video_encoder = "cpu"
+
+[plugins]
+enabled = [ "noctalia/screen_recorder" ]
+
+[shell]
+polkit_agent = true
+screen_time_enabled = true
+show_location = false
+
+    [shell.panel]
+    control_center_placement = "floating"
+    session_placement = "floating"
+    wallpaper_placement = "floating"
+
+    [shell.screenshot]
+    annotate = true
+    directory = "~/Pictures/Screenshots"
+
+[theme]
+builtin = "Tokyo-Night"
+mode = "dark"
+source = "builtin"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "hyprland", "kitty", "qt" ]
+
+[wallpaper]
+directory = "~/Pictures/Wallpapers"
+
+    [wallpaper.default]
+    path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
+
+    [wallpaper.last]
+    path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
+
+[widget.network]
+show_vpn_label = true
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
+
+[widget.workspaces]
+active_pill_size = 2.7000000000000002
+empty_color = "on_secondary"
+focused_output_only = true
+hide_when_empty = true
+inactive_pill_size = 2.25
+occupied_color = "on_secondary"
+scale = 1.1000000000000001

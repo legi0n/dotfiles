@@ -8,7 +8,7 @@
 Ensure the packages below are installed for the setup to work properly.
 
 ```sh
-pacman -S --needed neovim git unzip npm ripgrep
+sudo pacman -S --needed neovim git wget unzip npm ripgrep
 ```
 
 ## Standalone Installation

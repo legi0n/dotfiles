@@ -50,5 +50,5 @@ return {
         error = error,
         on_error = on_error,
     },
-    apply_theme = apply_theme
+    apply_theme = apply_theme,
 }

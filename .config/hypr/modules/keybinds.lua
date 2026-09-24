@@ -15,6 +15,7 @@ local noctalia = "noctalia msg "
 hl.bind("SUPER + Q", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(browser))
+hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(browser .. " --private-window"))
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(noctalia .. "panel-toggle launcher"))
 
 -- Utilities

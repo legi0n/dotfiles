@@ -10,7 +10,7 @@ These are my personal configuration files for my development environment.
 Ensure the packages below are installed for the setup to work properly.
 
 ```sh
-sudo pacman -S --needed git
+sudo pacman -S --needed base-devel git less tmux
 ```
 
 ## Additional Requirements

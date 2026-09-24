@@ -9,7 +9,7 @@ Ensure the packages below are installed for the setup to work properly.
 
 ```sh
 # Packages
-pacman -S --needed noctalia gpu-screen-recorder
+sudo pacman -S --needed noctalia gpu-screen-recorder
 
 # AUR packages (yay, paru, etc.)
 paru -S --needed wl-screenrec

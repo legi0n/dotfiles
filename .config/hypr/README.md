@@ -9,7 +9,7 @@ Ensure the packages below are installed for the setup to work properly.
 
 ```sh
 # Packages
-pacman -S --needed hyprland kitty nautilus
+sudo pacman -S --needed hyprland kitty nautilus noctalia
 
 # AUR packages (yay, paru, etc.)
 paru -S --needed zen-browser-bin

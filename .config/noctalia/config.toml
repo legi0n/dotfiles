@@ -241,6 +241,9 @@ widget_order = [
 [nightlight]
 enabled = true
 
+[osd.kinds]
+lock_keys = false
+
 [plugin_settings."noctalia/screen_recorder"]
 audio_source = "both"
 copy_to_clipboard = true

@@ -7,6 +7,7 @@ dotfiles=(
     ".gitconfig"
     ".tmux.conf"
     ".config/hypr"
+    ".config/kitty"
     ".config/noctalia"
     ".config/nvim"
 )

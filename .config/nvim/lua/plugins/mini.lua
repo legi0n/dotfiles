@@ -1,12 +1,17 @@
 return {
-    { "nvim-mini/mini.move", version = "*", opts = {} },
-    { "nvim-mini/mini.icons", version = "*", opts = {} },
+    {
+        "nvim-mini/mini.move",
+        version = "*",
+        opts = {},
+    },
     {
         "nvim-mini/mini.statusline",
         version = "*",
-        config = function()
+        opts = {},
+        config = function(_, opts)
             local statusline = require("mini.statusline")
-            statusline.setup({})
+            statusline.setup(opts)
+
             statusline.section_location = function()
                 return "%2l:%-2v"
             end

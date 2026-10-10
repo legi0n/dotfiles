@@ -6,7 +6,7 @@ return {
         { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },
     keys = {
-        { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+        { "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find Files" },
         {
             "<leader>fg",
             function()
@@ -21,5 +21,21 @@ return {
         { "<leader>fl", "<cmd>Telescope live_grep<cr>", desc = "Find with Grep" },
         { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find Buffers" },
         { "<leader>fr", "<cmd>Telescope resume<cr>", desc = "Resume Last Search" },
+    },
+    opts = {
+        defaults = {
+            file_ignore_patterns = {
+                ".git/",
+                ".cache",
+                "%.o",
+                "%.a",
+                "%.out",
+                "%.class",
+                "%.pdf",
+                "%.mkv",
+                "%.mp4",
+                "%.zip",
+            },
+        },
     },
 }

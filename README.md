@@ -18,6 +18,7 @@ sudo pacman -S --needed base-devel git less tmux
 Some of the larger configurations have their own dependencies and setup instructions. For additional details, see the respective README:
 
 - [Hyprland](./.config/hypr/README.md)
+- [Kitty](./.config/kitty/README.md)
 - [Noctalia](./.config/noctalia/README.md)
 - [Neovim](./.config/nvim/README.md)
 

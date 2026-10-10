@@ -1,7 +1,10 @@
 local languages = require("util.languages")
 
 return {
-    { "j-hui/fidget.nvim", opts = {} },
+    {
+        "j-hui/fidget.nvim",
+        opts = {},
+    },
     {
         "neovim/nvim-lspconfig",
         event = { "BufReadPre", "BufNewFile" },

@@ -1,5 +1,9 @@
 return {
-    { "fei6409/log-highlight.nvim", event = "BufRead *.log", opts = {} },
+    {
+        "fei6409/log-highlight.nvim",
+        event = "BufRead *.log",
+        opts = {}
+    },
     {
         "nvim-treesitter/nvim-treesitter",
         opts = {

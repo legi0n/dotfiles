@@ -1,5 +1,5 @@
 [bar.default]
-end = [ "network", "volume", "date", "notifications", "recorder" ]
+end = [ "network", "volume", "weather", "date", "notifications", "recorder" ]
 start = [ "workspaces" ]
 widget_spacing = 12
 
@@ -292,6 +292,9 @@ hide_when_no_unread = true
 
 [widget.recorder]
 type = "noctalia/screen_recorder:recorder"
+
+[widget.weather]
+show_condition = false
 
 [widget.workspaces]
 active_pill_size = 2.7000000000000002

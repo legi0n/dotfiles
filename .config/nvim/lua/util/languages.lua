@@ -105,7 +105,7 @@ end
 
 function M.formatters_by_ft()
     local out = {}
-    for _, lang in pairs(M.languages) do
+    for _, lang in pairs(enabled()) do
         for _, ft in ipairs(lang.filetypes or {}) do
             out[ft] = lang.formatters
         end
